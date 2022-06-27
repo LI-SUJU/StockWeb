@@ -1,6 +1,6 @@
 # goStock
 ### key facts check list
-* The user is able to use the service using mobile devices. They can use any(most of) updated brower to get access to the service.✔️
+* The user is able to use the service using mobile devices. They can use any(most of) updated broswer to get access to the service.✔️
 ![image](https://user-images.githubusercontent.com/78016917/175942048-0a763497-2161-4328-80cf-b29dcdc545ad.png)
 
 * The user will be able to undertake the following actions in the mobile app:
@@ -26,6 +26,8 @@
 #### share it! (share our service through social networks, under developing)
 ![image](https://user-images.githubusercontent.com/78016917/175944192-5abd3b83-95e7-4a0c-9799-a5ec1bec3fb5.png)
 #### works well wiht a laptop (devices with larger screen)
+![image](https://user-images.githubusercontent.com/78016917/175946305-5edefe0e-656f-43a6-b991-1df0f32bc2ff.png)
+
 ### acknowledgement
 - Thanks to the Tushare for providing financial info through its api service: https://tushare.pro/
 ### declaration of responsibility
