@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8" /><title>Charts - ETF50</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/bootstrap-responsive.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/font-awesome.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/adminia.css') }}" rel="stylesheet" /> 
+    <link href="{{ url_for('static', filename='css/adminia-responsive.css') }}" rel="stylesheet" /> 
+    <script src="{{ url_for('static', filename='js/plotly.min.js') }}" ></script>
+     <script language="JavaScript" src="../static/js/jquery.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<!--页面头部-->
+<div class="navbar navbar-fixed-top"><div class="navbar-inner">
+			<div class="container">
+	         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+				<span class="icon-bar"></span></a>
+		   	<a class="brand" href="./">goStock!</a></div> <!-- /container -->
+</div> <!-- /navbar-inner --></div> <!-- /navbar -->
+
+<div id="content">
+	<div class="container">
+		<div class="row">
+			<div class="span3">
+				<form action="/search" method="POST" >
+					<!--股票信息输入框-->
+					<div class="account-container">
+						<div class="account-details">
+							<span class="account-name">Graph Type
+								<select id="stock" name="graph_type" onchange="fctCheck(this.value);">
+									<option>半年线图</option>
+									<option>k线图</option>
+									<option>高低点</option>
+									<option>振幅对比</option>
+									<option>市盈率</option>
+									<option>AH股价比</option>
+								</select>
+							</span>
+                            <select id="k线图" name="period" class="subselector" style="display:none">
+                                <option value="日k">日k</option>
+                                <option value="周k">周k</option>
+                                <option value="月k">月k</option>
+                            </select>
+
+                            <select id="市盈率" name="type" class="subselector" style="display:none">
+                                <option value="LYR">LYR</option>
+                                <option value="TTM">TTM</option>
+                            </select>
+                            <select id="AH股价比" name="A/H" class="subselector" style="display:none">
+                                <option value="A/H">A股转H股</option>
+                                <option value="H/A">H股转A股</option>
+                            </select>
+
+                            <span id="振幅对比" class="subselector" style="display:none" >对比股票代码<input type="text" name="stock_id2" maxlength="6"></span>
+                            <span class="account-name">Stock Code<input type="text" name="stock_id" maxlength="6" value="000001"></span>
+							<span class="account-name">Start Date<input type="date" name="start_date"></span>
+							<span class="account-name">End Date<input type="date" name="end_date"></span>
+
+						</div> <!-- /account-details -->
+					</div> <!-- /account-container --><hr />
+                <button type="submit" class="btn btn-primary">Get A Graph</button>
+				</form>
+
+				<button class="btn" onclick="openNews();" name="{{context.title}}">Related News</button>
+				<div class="sidebar-extra"><p>This web app is developed with following libraries：</p>
+                    <ul><li>Plotly -- data visualization</li><li>Pandas -- data processing and analysing</li> 
+                        <li>Tushare -- financial data api</li><li>Flask --  backend service framework</li></ul>
+				</div><br />
+             </div> <!-- /span3 -->
+			<div class="span9">
+                <div class="widget">
+					<div class="widget-content">
+                        <h3 class="graph-title">{{context.title}}</h3>
+                        <div class='graph' style="color: red">{{context.graph |safe }}</div>
+                    </div>
+                </div>
+            </div> <!-- /span9 -->
+        </div><!-- /row -->
+        <div class="row">
+        <!-- <div class="span3"></div> -->
+        <div class="span6">
+            <blockquote class="twitter-tweet" data-cards="hidden"><p lang="en" dir="ltr">See the top 7 digital trends shaping the future of work.</p>&mdash; MuleSoft (@MuleSoft) <a href="https://twitter.com/MuleSoft/status/1455569294738313218?ref_src=twsrc%5Etfw">November 2, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="span6">
+            <div class="fb-post" data-href="https://www.facebook.com/20531316728/posts/10154009990506729/" data-width="500" data-show-text="true"><blockquote cite="https://zh-cn.facebook.com/20531316728/posts/10154009990506729/" class="fb-xfbml-parse-ignore">由 <a href="https://www.facebook.com/facebook/">Facebook</a> 发布于&nbsp;<a href="https://zh-cn.facebook.com/20531316728/posts/10154009990506729/">2015年8月27日周四</a></blockquote></div>
+        </div>
+        </div>
+        <!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">See the top 7 digital trends shaping the future of work.</p>&mdash; MuleSoft (@MuleSoft) <a href="https://publish.twitter.com/oembed?
+            url=https://twitter.com/Interior/status/463440424141459456&align=center&cards=hidden">November 2, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+        <!-- <iframe src="https://search.yahoo.com/" title="W3Schools Free Online Web Tutorials" width="100%" height="300"></iframe> -->
+    </div> <!-- /container -->
+</div> <!-- /content -->
+
+    <script>
+     function fctCheck(food)
+     {
+         var elems = document.getElementsByClassName("subselector");
+         console.log(elems)
+         for (var i = 0; i < elems.length; i++) {
+          elems.item(i).style.display = "none";
+         }
+         document.getElementById(food).style.display = "block";
+     };
+     function openNews()
+     {  
+        let name = document.getElementsByTagName("BUTTON")[1].getAttribute("name");
+        let start = name.indexOf(",")+1;
+        let end = name.indexOf("-")
+        name = name.slice(start, end)
+        // let searchItem = "https://search.yahoo.com/search?p=" + context.title;
+        window.location.href = "https://search.yahoo.com/search?p=" + name;
+     }
+     </script>
+</body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v14.0" nonce="jlMcAyBA"></script>
+</html>
