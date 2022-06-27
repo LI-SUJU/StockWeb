@@ -1,6 +1,3 @@
-## For more details, please see the example 9-8 in book of
-#  "Python Programming" by ChenChunHui.
-#  JamesYe 2019-9-10 Happy Teacher's Day
 # This is main enterance of project.
 # visit http://127.0.0.1:5000/, you can see the graphic
 
