@@ -1,7 +1,6 @@
 # goStock
 ### key facts check list
 * The user is able to use the service using mobile devices. They can use any(most of) updated broswer to get access to the service.✔️
-![image](https://user-images.githubusercontent.com/78016917/175942048-0a763497-2161-4328-80cf-b29dcdc545ad.png)
 
 * The user will be able to undertake the following actions in the mobile app:
   * Register and login users via:❌
@@ -17,6 +16,7 @@
   * Manage their watchlist by adding or removing financial instruments❌
   * Have an overview of the losses and gains in their portfolio❌
 ### brief intro to this project
+![image](https://user-images.githubusercontent.com/78016917/175942048-0a763497-2161-4328-80cf-b29dcdc545ad.png)
 #### learn market through graphs
 ![image](https://user-images.githubusercontent.com/78016917/175943501-b2fdf96a-be41-4ce5-bea4-994145dc7d92.png)
 #### fetch info using stock code
