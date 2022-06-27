@@ -33,7 +33,7 @@
 - git clone https://github.com/LI-SUJU/goStock.git
 - use "pip install" script to install all the packages needed for this project manually
 - run app.py to start the service
-- visit http://127.0.0.1:5000/
+- visit http://127.0.0.1:5000/ (make sure port 5000 is not in use)
 ## key python libraries used
 - Plotly -- data visualization
 - Pandas -- data processing and analysing
