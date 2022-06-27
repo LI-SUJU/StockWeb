@@ -29,6 +29,11 @@
 ![image](https://user-images.githubusercontent.com/78016917/175944192-5abd3b83-95e7-4a0c-9799-a5ec1bec3fb5.png)
 ### works well with a laptop (devices with larger screen)6️⃣
 ![image](https://user-images.githubusercontent.com/78016917/175946305-5edefe0e-656f-43a6-b991-1df0f32bc2ff.png)
+## run this project in your local environment
+- git clone
+- use "pip install" script to install all the packages needed for this project manually
+- run app.py to start the service
+- visit http://127.0.0.1:5000/
 ## key python libraries used
 - Plotly -- data visualization
 - Pandas -- data processing and analysing
