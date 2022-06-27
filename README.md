@@ -29,7 +29,11 @@
 ![image](https://user-images.githubusercontent.com/78016917/175944192-5abd3b83-95e7-4a0c-9799-a5ec1bec3fb5.png)
 ### works well with a laptop (devices with larger screen)6️⃣
 ![image](https://user-images.githubusercontent.com/78016917/175946305-5edefe0e-656f-43a6-b991-1df0f32bc2ff.png)
-
+## key python libraries used
+- Plotly -- data visualization
+- Pandas -- data processing and analysing
+- Tushare -- financial data api
+- Flask --  backend service framework
 ## acknowledgement
 - Thanks to the Tushare for providing financial info through its api service: https://tushare.pro/
 - Thanks to the Juhe for providing financial info through its api service: http://web.juhe.cn:8080
