@@ -15,7 +15,12 @@
   * Manage their watchlist by adding or removing financial instruments✔️
   * Have an overview of the losses and gains in their portfolio❌
 ## brief intro to this project👇
+### home page
+![image](https://user-images.githubusercontent.com/78016917/176125368-35d55078-2e29-4d40-afe3-9219cf32eb12.png)
+### dashboard page
 ![image](https://user-images.githubusercontent.com/78016917/175942048-0a763497-2161-4328-80cf-b29dcdc545ad.png)
+### watchlist page
+![image](https://user-images.githubusercontent.com/78016917/176125692-f22c923d-c071-494c-b233-fba6817ebc1f.png)
 ### learn market through graphs1️⃣
 ![image](https://user-images.githubusercontent.com/78016917/175943501-b2fdf96a-be41-4ce5-bea4-994145dc7d92.png)
 ### fetch info using stock code2️⃣
