@@ -51,8 +51,27 @@ def get_value():
     }
 
 
+# @app.route('/', methods=["POST", "GET"])
+# def index():
+#     values={
+#         "start_date":getdate(180),
+#         "end_date":getdate(0),
+#         "graph_type":"半年线图"
+#     }
+#     chart = Chart_Plot(**values)
+#     context['graph'], context['title'] = chart.twoline_graph()
+#     return render_template("chars.html", title='Home', context=context)
+
 @app.route('/', methods=["POST", "GET"])
 def index():
+    return render_template("home.html", title='Home', context=context)
+
+@app.route('/watchlist', methods=["POST", "GET"])
+def watchlist():
+    return render_template("watchlist.html", title='Home', context=context)
+
+@app.route('/dashboard', methods=["POST", "GET"])
+def dashboard():
     values={
         "start_date":getdate(180),
         "end_date":getdate(0),
@@ -61,7 +80,6 @@ def index():
     chart = Chart_Plot(**values)
     context['graph'], context['title'] = chart.twoline_graph()
     return render_template("chars.html", title='Home', context=context)
-
 
 @app.route('/search', methods=["POST", "GET"])
 def search():

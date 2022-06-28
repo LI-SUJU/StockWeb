@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"  style="background-color: rgb(42, 42, 42);"><head><meta charset="utf-8" /><title>Charts - ETF50</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/bootstrap-responsive.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/font-awesome.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/adminia.css') }}" rel="stylesheet" /> 
+    <link href="{{ url_for('static', filename='css/adminia-responsive.css') }}" rel="stylesheet" /> 
+    <script src="{{ url_for('static', filename='js/plotly.min.js') }}" ></script>
+     <script language="JavaScript" src="../static/js/jquery.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body style="background-color: rgb(42, 42, 42);">
+<!--页面头部-->
+<div class="navbar navbar-fixed-top"><div class="navbar-inner">
+			<div class="container">
+	         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+				<span class="icon-bar"></span></a>
+		   	<a class="brand" href="./">goStock!</a></div> <!-- /container -->
+</div> <!-- /navbar-inner --></div> <!-- /navbar -->
+
+<div id="content" style="background-color: rgb(42, 42, 42);">
+	<div class="container">
+		<div class="row">
+			<div class="span12" style="justify-content: center; align-items: center; display: flex;flex-direction:column">
+                <button type="submit" style="margin-top: 30px; width: 30%" class="btn btn-outline-light btn-lg" onclick="dashboard();"><b>Market Dashboard</b></button>
+				<button class="btn btn-outline-light btn-lg" style="margin-top: 30px; width: 30%"  name="{{context.title}}" onclick="watchlist();"><b>Portfolio</b></button>
+             </div> <!-- /span3 -->
+
+        </div><!-- /row -->
+        <!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">See the top 7 digital trends shaping the future of work.</p>&mdash; MuleSoft (@MuleSoft) <a href="https://publish.twitter.com/oembed?
+            url=https://twitter.com/Interior/status/463440424141459456&align=center&cards=hidden">November 2, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+        <!-- <iframe src="https://search.yahoo.com/" title="W3Schools Free Online Web Tutorials" width="100%" height="300"></iframe> -->
+    </div> <!-- /container -->
+</div> <!-- /content -->
+
+    <script>
+     function fctCheck(food)
+     {
+         var elems = document.getElementsByClassName("subselector");
+         console.log(elems)
+         for (var i = 0; i < elems.length; i++) {
+          elems.item(i).style.display = "none";
+         }
+         document.getElementById(food).style.display = "block";
+     };
+     function openNews()
+     {  
+        let name = document.getElementsByTagName("BUTTON")[1].getAttribute("name");
+        let start = name.indexOf(",")+1;
+        let end = name.indexOf("-")
+        name = name.slice(start, end)
+        // let searchItem = "https://search.yahoo.com/search?p=" + context.title;
+        window.location.href = "https://search.yahoo.com/search?p=" + name;
+     }
+     function dashboard()
+     {
+        window.location.href = "./dashboard"
+     }
+     function watchlist()
+     {
+        window.location.href = "./watchlist"
+     }
+     </script>
+</body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v14.0" nonce="jlMcAyBA"></script>
+</html>
