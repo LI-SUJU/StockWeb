@@ -11,8 +11,8 @@
     * Historical price data of the financial instrument✔️
     * News related to the financial instrument✔️, user should be able to click on the source, and be redirected to the source’s origin.❌
   * Share the financial instrument with external parties.✔️
-  * Follow the financial instrument in the process adding it to their watchlist (portfolio)❌
-  * Manage their watchlist by adding or removing financial instruments❌
+  * Follow the financial instrument in the process adding it to their watchlist (portfolio)✔️
+  * Manage their watchlist by adding or removing financial instruments✔️
   * Have an overview of the losses and gains in their portfolio❌
 ## brief intro to this project👇
 ![image](https://user-images.githubusercontent.com/78016917/175942048-0a763497-2161-4328-80cf-b29dcdc545ad.png)
