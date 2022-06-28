@@ -11,23 +11,28 @@
     * Historical price data of the financial instrument✔️
     * News related to the financial instrument✔️, user should be able to click on the source, and be redirected to the source’s origin.❌
   * Share the financial instrument with external parties.✔️
-  * Follow the financial instrument in the process adding it to their watchlist (portfolio)❌
-  * Manage their watchlist by adding or removing financial instruments❌
+  * Follow the financial instrument in the process adding it to their watchlist (portfolio)✔️
+  * Manage their watchlist by adding or removing financial instruments✔️
   * Have an overview of the losses and gains in their portfolio❌
 ## brief intro to this project👇
+### home page1️⃣
+![image](https://user-images.githubusercontent.com/78016917/176125368-35d55078-2e29-4d40-afe3-9219cf32eb12.png)
+### dashboard page2️⃣
 ![image](https://user-images.githubusercontent.com/78016917/175942048-0a763497-2161-4328-80cf-b29dcdc545ad.png)
-### learn market through graphs1️⃣
+### watchlist page3️⃣
+![image](https://user-images.githubusercontent.com/78016917/176125692-f22c923d-c071-494c-b233-fba6817ebc1f.png)
+### learn market through graphs4️⃣
 ![image](https://user-images.githubusercontent.com/78016917/175943501-b2fdf96a-be41-4ce5-bea4-994145dc7d92.png)
-### fetch info using stock code2️⃣
+### fetch info using stock code5️⃣
 ![image](https://user-images.githubusercontent.com/78016917/175943727-bfd95db5-7266-49ea-b9e5-d765464ddfe8.png)
-### generate a graph with a simple click (average pending time is 0.7s, affected by network condition)3️⃣
+### generate a graph with a simple click (average pending time is 0.7s, affected by network condition)6️⃣
 ![image](https://user-images.githubusercontent.com/78016917/175943908-d80138e4-2bfa-424d-9fb3-3e7a6f48f136.png)
-### related news on the company of the graph (in the given case below, users click it and the page will go to Yahoo SE with "平安银行" info displaying)4️⃣
+### related news on the company of the graph (in the given case below, users click it and the page will go to Yahoo SE with "平安银行" info displaying)7️⃣
 ![image](https://user-images.githubusercontent.com/78016917/175950045-d9796283-0a38-49fb-9224-e6cc5be28f0a.png)
 ![image](https://user-images.githubusercontent.com/78016917/175950160-250a86c6-d8bd-490f-a326-96faa6c47d30.png)
-### share it! (share our service through social networks, under developing)5️⃣
+### share it! (share our service through social networks, under developing)8️⃣
 ![image](https://user-images.githubusercontent.com/78016917/175944192-5abd3b83-95e7-4a0c-9799-a5ec1bec3fb5.png)
-### works well with a laptop (devices with larger screen)6️⃣
+### works well with a laptop (devices with larger screen)9️⃣
 ![image](https://user-images.githubusercontent.com/78016917/175946305-5edefe0e-656f-43a6-b991-1df0f32bc2ff.png)
 ## run this project in your local environment
 - git clone https://github.com/LI-SUJU/goStock.git
